@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.velocitypowered'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        name 'velocity'
+        url 'https://repo.velocitypowered.com/snapshots/'
+    }
+    mavenCentral()
+}
+dependencies {
+    compile 'com.velocitypowered:velocity-api:1.0-SNAPSHOT'
+}
