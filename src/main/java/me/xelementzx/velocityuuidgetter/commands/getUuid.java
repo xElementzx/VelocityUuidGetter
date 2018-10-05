@@ -15,6 +15,7 @@ public class getUuid implements Command {
             source.sendMessage(TextComponent.of("Invalid Usage!").color(TextColor.RED));
             source.sendMessage(TextComponent.of("Usage: /getuuid <player>").color(TextColor.RED));
         }
+
         if (args.length == 1) {
             String playerName = args[0];
             String playerOfflineUniqueID = UuidUtils.toUndashed(UuidUtils.generateOfflinePlayerUuid(playerName));

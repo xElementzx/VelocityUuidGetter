@@ -9,9 +9,11 @@ import org.slf4j.Logger;
 
 @Plugin(id = "velocityuuidgetter", name = "VelocityUuidGetter", version = "1.0-SNAPSHOT",
         description = "Meh, isn't it obvious", authors = {"xElementzx"})
+
 public class VelocityUuidGetter {
     private final ProxyServer server;
     private final Logger logger;
+
     @Inject
     public VelocityUuidGetter(CommandManager commandManager, ProxyServer server, Logger logger) {
         commandManager.register(new getUuid(), "getUuid");
