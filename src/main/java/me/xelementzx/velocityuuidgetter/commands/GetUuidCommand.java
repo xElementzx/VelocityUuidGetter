@@ -26,10 +26,10 @@ public class GetUuidCommand implements Command {
             if (args.length == 1) {
                 String playerName = args[0];
                 String playerOfflineUniqueID = UuidUtils.toUndashed(UuidUtils.generateOfflinePlayerUuid(playerName));
-                String playerOnlineUniqueID = getOnlineUuid(playerName.toLowerCase()).flatMap(jsonObject -> parseJson(jsonObject.get("id"), String.class)).orElse("Unknown - Check the username");
+                String playerOnlineUniqueID = getOnlineUuid(playerName.toLowerCase()).flatMap(jsonObject -> parseJson(jsonObject.get("id"), String.class)).orElse(null);
                 source.sendMessage(TextComponent.of("UUID of: " + playerName).color(TextColor.GREEN));
-                if (playerOnlineUniqueID.equals("Unknown - Check the username")) {
-                    source.sendMessage(TextComponent.of("Online UUID: " + playerOnlineUniqueID).color(TextColor.RED));
+                if (playerOnlineUniqueID == null ) {
+                    source.sendMessage(TextComponent.of("Getting Online UUID Failed!").color(TextColor.RED));
                 } else {
                     source.sendMessage(TextComponent.of("Online UUID: " + playerOnlineUniqueID).color(TextColor.GREEN));
                 }
