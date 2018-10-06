@@ -1,2 +1,5 @@
 # VelocityUuidGetter
-## Grr Stay Away
+## Commands:
+``/getuuid <player>``
+## Permissions:
+``velocityuuidgetter.command.getuuid``
