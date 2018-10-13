@@ -1,6 +1,9 @@
 package me.xelementzx.velocityuuidgetter.commands;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.velocitypowered.api.command.Command;
 import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.util.UuidUtils;
@@ -52,6 +55,7 @@ public class GetUuidCommand implements Command {
             return Optional.empty();
         }
     }
+
     private static <T> Optional<T> parseJson(String json, Class<T> type) {
         try {
             return parseJson(new JsonParser().parse(json), type);
