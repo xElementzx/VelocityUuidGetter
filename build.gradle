@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.velocitypowered'
-version '1.0-SNAPSHOT'
+version '1.0.1'
 
 sourceCompatibility = 1.8
 
@@ -15,5 +15,5 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    compile 'com.velocitypowered:velocity-api:1.0-SNAPSHOT'
+    compile 'com.velocitypowered:velocity-api:1.0.1-SNAPSHOT'
 }
