@@ -42,7 +42,6 @@ public class GetUuidCommand implements SimpleCommand {
 
     @Override
     public boolean hasPermission(final Invocation invocation) {
-        invocation.source().sendMessage(Component.text("You do not have permission to execute this command!", NamedTextColor.RED));
         return invocation.source().hasPermission("velocityuuidgetter.command.getuuid");
     }
 
