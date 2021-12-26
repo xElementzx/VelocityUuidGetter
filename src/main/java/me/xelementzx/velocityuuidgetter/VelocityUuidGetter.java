@@ -8,7 +8,7 @@ import com.velocitypowered.api.proxy.ProxyServer;
 import me.xelementzx.velocityuuidgetter.commands.GetUuidCommand;
 import org.slf4j.Logger;
 
-@Plugin(id = "velocityuuidgetter", name = "VelocityUuidGetter", version = "1.0.1",
+@Plugin(id = "velocityuuidgetter", name = "VelocityUuidGetter", version = "1.1.0",
         description = "Gets a players online and offline Uuid.", authors = "xElementzx")
 
 @SuppressWarnings("unused")
@@ -25,6 +25,6 @@ public class VelocityUuidGetter {
     @Subscribe
     public void onProxyInitialize(ProxyInitializeEvent event) {
         logger.info("VelocityUuidGetter Loaded!");
-        server.getCommandManager().register(new GetUuidCommand(), "getuuid");
+        server.getCommandManager().register("getuuid", new GetUuidCommand());
     }
 }
